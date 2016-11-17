@@ -3,11 +3,17 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="pro6Game.css">
-    <script src="pro6Game.js"></script>
   </head>
   <body>
     <svg width = "100%" viewBox = "0 0 800 400" style="background-color:black">
-      <image id="pacman" x="550" y="250" width="80" height="80" xlink:href="img/smallerpacman.png"/>
+      <image id="pacman" x="550" y="250" width="60" height="60" xlink:href="img/smallerpacman.png"/>
+      <image id="pacmanFood" x="325" y="0" width="20" height="20" xlink:href="img/pacmanfood.png">
+        <animate id = "pacmanFood1" attributeName="y" from="0" to="225" dur="6s" repeatCount="indefinite" begin="1s"/>
+      </image>
+      <image id="pacmanFood2" x="425" y="0" width="20" height="20" xlink:href="img/pacmanfood.png">
+       <animate attributeName="y" from="0" to="225" dur="6s" repeatCount="indefinite" begin="3s" />
+     </image>
     </svg>
+    <script src="pro6Game.js"></script>
   </body>
 </html>
