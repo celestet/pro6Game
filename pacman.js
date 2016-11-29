@@ -1,15 +1,6 @@
-var foodX = Number(document.getElementById("pacmanFood").getAttribute("x"))
-var foodY = Number(document.getElementById("pacmanFood").getAttribute("y"))
-var food2X = Number(document.getElementById("pacmanFood2").getAttribute("x"))
-var food2Y = Number(document.getElementById("pacmanFood2").getAttribute("y"))
-function randomNumber(foodX,foodY)
+function randomNumber(min,max)
 {
- return Math.floor(Math.random()*(foodX-foodY+1)+foodY);
-}
-
-function randomNumber(food2X,food2Y)
-{
- return Math.floor(Math.random()*(food2X-food2Y+1)+food2Y);
+ return Math.floor(Math.random()*(max-min+1)+min);
 }
 
 document.addEventListener("keydown", function(e) {
@@ -42,7 +33,7 @@ var food2Y = Number(document.getElementById("pacmanFood2").getAttribute("y"))
      }
      else {
        pacmanFood.setAttribute("opacity", "0")
-       randomNumber();
+      //  return randomNumber();
      }
 
      if (pacmanY > foodY) {
@@ -50,7 +41,7 @@ var food2Y = Number(document.getElementById("pacmanFood2").getAttribute("y"))
      }
      else {
      pacmanFood.setAttribute("opacity", "0")
-      randomNumber();
+    //  return randomNumber();
      }
 
      if (pacmanX > food2X) {
@@ -58,7 +49,6 @@ var food2Y = Number(document.getElementById("pacmanFood2").getAttribute("y"))
      }
      else {
        pacmanFood2.setAttribute("opacity", "0")
-        randomNumber();
      }
 
      if (pacmanY > food2Y) {
@@ -66,8 +56,6 @@ var food2Y = Number(document.getElementById("pacmanFood2").getAttribute("y"))
      }
      else {
        pacmanFood2.setAttribute("opacity", "0")
-        randomNumber();
      }
-
 
   });
